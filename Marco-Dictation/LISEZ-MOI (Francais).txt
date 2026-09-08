@@ -1,0 +1,126 @@
+﻿MARCO DICTATION
+Appuie sur F9 n'importe où dans Windows, parle, ça s'écrit.
+F9 = anglais, Shift+F9 = français.
+
+
+CE QUE C'EST
+------------
+Un interrupteur de dictée mains libres pour tout le PC. Il utilise le moteur
+vocal déjà intégré à Windows 11 (la saisie vocale) et le met sur une seule
+touche.
+
+Comme l'enregistrement vit au niveau du système et pas dans une seule
+application, tu peux continuer à scroller, cliquer et bouger pendant que tu
+parles. Le texte arrive dans le champ où se trouve le curseur : Claude, VS
+Code, Word, Gmail, WhatsApp Web, une barre de recherche, n'importe quoi.
+
+
+INSTALLATION
+------------
+1. Décompresse ce dossier où tu veux (le Bureau, c'est très bien).
+2. Double-clique sur INSTALL.bat
+3. Windows peut afficher un écran bleu "Windows a protégé votre ordinateur",
+   parce que le fichier vient d'internet. Clique sur "Informations
+   complémentaires", puis "Exécuter quand même".
+4. Attends la ligne verte "INSTALLED". C'est fini.
+
+Aucun droit administrateur n'est nécessaire pour cette étape. Rien n'est
+installé sur tout le système, tout reste dans ton dossier utilisateur.
+
+
+UTILISATION
+-----------
+F9          démarre la dictée en ANGLAIS (une petite barre micro apparaît)
+Shift+F9    démarre la dictée en FRANÇAIS
+F9 / Esc    appuie à nouveau pour arrêter ; Esc ferme aussi la barre micro,
+            pour ne jamais chercher la petite croix
+
+Le tout démarre automatiquement à chaque allumage du PC.
+
+La toute première fois, clique D'ABORD dans un champ de texte, puis appuie sur
+F9. Windows n'ouvre pas la barre micro si aucun champ n'a le curseur.
+
+
+POUR QUE LES DEUX LANGUES MARCHENT
+----------------------------------
+Windows dicte dans la langue de saisie ACTIVE. L'outil la change pour toi,
+mais deux choses doivent exister sur le PC :
+
+1. Les deux langues dans ta liste de saisie : Paramètres > Heure et langue >
+   Langue et région > Ajouter une langue (français et anglais). S'il en
+   manque une, l'outil te le dit au lieu de dicter dans la mauvaise langue.
+
+2. Un moteur de reconnaissance vocale pour chaque langue. Si la dictée dans
+   une langue ne fait rien ou sort du charabia, double-clique sur
+   "INSTALL-SPEECH-LANGUAGES (optional).bat". Il demande une seule fois la
+   confirmation administrateur, installe le ou les packs de langue Windows
+   manquants, écrit tout dans un journal, et ne change PAS la langue
+   d'affichage de ton Windows.
+
+
+UN RÉGLAGE À CONNAÎTRE
+----------------------
+La ponctuation automatique : roue dentée sur la barre micro, un seul
+interrupteur. Active-le et Windows écrit les virgules et les points à ta
+place.
+
+
+CE QUE L'INSTALLATEUR MODIFIE SUR TON PC
+----------------------------------------
+Transparence totale, ce sont quatre choses et rien d'autre :
+
+1. Il copie deux fichiers dans C:\Users\<toi>\AppData\Local\MarcoDictation
+   (le script de raccourci, plus AutoHotkey, le petit outil libre et gratuit
+   qui écoute la touche F9)
+2. Il ajoute un raccourci dans le dossier Démarrage pour que F9 marche encore
+   après un redémarrage
+3. Il ACTIVE la "reconnaissance vocale en ligne" de Windows. C'est le point
+   important : ça fait passer Windows du moteur vocal hors ligne au moteur
+   cloud, nettement plus précis. Ta voix est traitée par Microsoft, exactement
+   comme avec n'importe quel produit de dictée.
+4. Il ACTIVE la personnalisation de la saisie, pour que la reconnaissance
+   apprenne ton vocabulaire et s'améliore avec l'usage.
+
+Les points 3 et 4 sont des réglages Windows normaux, réversibles à tout
+moment dans Paramètres > Confidentialité et sécurité > Voix, et >
+Personnalisation de l'écriture manuscrite et de la saisie.
+
+Si tu utilises Claude Code : pendant que tu dictes, l'outil dépose un petit
+fichier repère dans C:\Users\<toi>\.claude\voice\dictating.flag. Si tu as un
+script de notification dans C:\Users\<toi>\.claude\notify-approval-needed.ps1,
+il lui demande de mettre les popups en attente jusqu'à la fin de ta dictée.
+Si tu ne l'as pas, il ne se passe rien et rien ne casse.
+
+
+DÉSINSTALLATION
+---------------
+Double-clique sur UNINSTALL.bat. Ça arrête l'outil, le retire du démarrage et
+supprime ses fichiers.
+
+
+EN CAS DE PROBLÈME
+------------------
+F9 ne fait rien
+   Vérifie que la fenêtre où tu écris ne tourne pas en administrateur. Un
+   programme normal ne peut pas envoyer de touches dans un programme élevé.
+   Sinon relance simplement INSTALL.bat, il se répare tout seul.
+
+La barre micro ne s'ouvre pas
+   Clique d'abord dans un champ de texte. Windows a besoin d'un endroit où
+   écrire.
+
+Une bulle dit que la langue de saisie n'a pas pu être changée
+   Ajoute la langue manquante dans Paramètres > Heure et langue > Langue et
+   région, puis réessaie.
+
+Les mots sortent en charabia dans une langue
+   Cette langue n'a pas encore de moteur de reconnaissance. Lance
+   "INSTALL-SPEECH-LANGUAGES (optional).bat".
+
+Esc se comporte bizarrement
+   L'outil retient si la barre est ouverte ou fermée. Si tu as fermé la barre
+   avec la croix de la souris au lieu de Esc ou F9, ça peut se désynchroniser.
+   Appuie deux fois sur F9 pour resynchroniser.
+
+
+Construit par Joseph avec Claude Code.

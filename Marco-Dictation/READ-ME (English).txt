@@ -1,0 +1,120 @@
+﻿MARCO DICTATION
+Press F9 anywhere in Windows, speak, and it types. F9 = English, Shift+F9 = French.
+
+
+WHAT IT IS
+----------
+A hands free dictation switch for your whole PC. It uses the speech engine
+already built into Windows 11 (Voice Typing), and puts it on a single key.
+
+Because the recording lives at the operating system level and not inside one
+app, you can keep scrolling, clicking and moving around while you talk. The
+text lands in whatever text box has the cursor: Claude, VS Code, Word, Gmail,
+WhatsApp Web, a search bar, anything.
+
+
+HOW TO INSTALL
+--------------
+1. Unzip this folder anywhere (Desktop is fine).
+2. Double click INSTALL.bat
+3. Windows may show a blue "Windows protected your PC" box, because the file
+   came from the internet. Click "More info", then "Run anyway".
+4. Wait for the green "INSTALLED" line. That is it.
+
+No administrator rights are needed. Nothing is installed system wide, it all
+lives in your own user folder.
+
+
+HOW TO USE IT
+-------------
+F9          start dictation in ENGLISH (a small microphone bar appears)
+Shift+F9    start dictation in FRENCH
+F9 / Esc    press again to stop; Esc also closes the microphone bar, so you
+            never hunt for the little X
+
+It starts automatically every time you turn on your PC.
+
+The very first time, click inside a text box FIRST, then press F9. Windows
+will not open the microphone bar if no text field has the cursor.
+
+
+FOR THE TWO LANGUAGES TO WORK
+-----------------------------
+Windows dictates in the language of the ACTIVE INPUT LANGUAGE. The tool
+switches it for you, but two things must exist on the PC:
+
+1. Both languages in your input list: Settings > Time & language >
+   Language & region > Add a language (English and French). If one is
+   missing, the tool tells you instead of dictating in the wrong language.
+
+2. A speech recognizer for each language. If dictation in one language does
+   nothing or comes out garbled, double click
+   "INSTALL-SPEECH-LANGUAGES (optional).bat". It asks for the admin
+   confirmation once, installs the missing Windows language pack(s), writes
+   everything to a log, and does NOT change the language your Windows is
+   displayed in.
+
+
+ONE SETTING WORTH KNOWING
+-------------------------
+Automatic punctuation: gear icon on the microphone bar, one toggle. Turn it
+on and Windows writes the commas and full stops for you.
+
+
+WHAT THE INSTALLER CHANGES ON YOUR PC
+-------------------------------------
+Full transparency, it is four things and nothing else:
+
+1. Copies two files into  C:\Users\<you>\AppData\Local\MarcoDictation
+   (the hotkey script, plus AutoHotkey, the small free open source tool that
+   listens for the F9 key)
+2. Adds a shortcut in your Startup folder so F9 works after a reboot
+3. Turns ON "online speech recognition" in Windows. This is the big one: it
+   switches Windows from the offline speech engine to the cloud engine, which
+   is far more accurate. Your voice is processed by Microsoft, exactly like it
+   is with any dictation product.
+4. Turns ON typing personalization, so the recognition learns your own
+   vocabulary over time and gets better the more you use it.
+
+Points 3 and 4 are normal Windows settings you can flip back any time in
+Settings > Privacy and security > Speech, and > Inking and typing
+personalization.
+
+If you use Claude Code: while you dictate, the tool drops a small flag file
+at C:\Users\<you>\.claude\voice\dictating.flag. If you have a notification
+script at C:\Users\<you>\.claude\notify-approval-needed.ps1 it is told to
+queue popups until you finish talking. If you don't, nothing happens and
+nothing breaks.
+
+
+HOW TO REMOVE IT
+----------------
+Double click UNINSTALL.bat. It stops the tool, removes it from startup and
+deletes its files.
+
+
+IF SOMETHING GOES WRONG
+-----------------------
+F9 does nothing
+   Check that the window you are typing in is not running as administrator.
+   A normal program cannot send keys into an elevated one. Otherwise just run
+   INSTALL.bat again, it repairs itself.
+
+The microphone bar does not open
+   Click inside a text box first. Windows needs a place to type into.
+
+A bubble says it could not switch the input language
+   Add the missing language in Settings > Time & language > Language &
+   region, then try again.
+
+The words come out garbled in one language
+   That language has no speech recognizer yet. Run
+   "INSTALL-SPEECH-LANGUAGES (optional).bat".
+
+Esc behaves oddly
+   The tool tracks whether the bar is open. If you closed the bar with the
+   mouse X instead of Esc or F9, it can get out of sync. Press F9 twice to
+   resynchronise.
+
+
+Built by Joseph with Claude Code.
