@@ -1,0 +1,30 @@
+MARCO DICTATION POUR MAC
+Dictée vocale français + anglais, sans compte, sans mot de passe admin, sans abonnement.
+Utilise la dictée intégrée d'Apple : rien n'est installé sur ton Mac.
+
+INSTALLATION (2 minutes)
+1. Télécharge Marco-Dictation-Mac.zip et double-clique dessus (il se décompresse tout seul).
+2. Clic DROIT sur INSTALL.command, puis Ouvrir, puis Ouvrir encore une fois.
+   (Un double-clic simple affiche « impossible d'ouvrir, développeur non identifié » :
+    c'est normal pour un fichier téléchargé, le clic droit > Ouvrir contourne ça.)
+3. Le Terminal s'ouvre et t'ouvre les Réglages sur le panneau Dictée. Fais les 3 clics indiqués :
+   Dictée ON, Langues = Français + Anglais, Raccourci = Appuyer deux fois sur Contrôle.
+4. Reviens dans le Terminal, appuie sur Entrée : un rapport vert/rouge s'affiche.
+5. Envoie une capture du rapport à Joseph.
+
+UTILISATION
+- Curseur dans un champ texte (WhatsApp, Mail, Pages...), appuie 2 fois sur Contrôle, parle.
+- 2 fois Contrôle (ou Échap) pour arrêter.
+- Langue : clique le petit micro à l'écran pour passer de FR à EN.
+  Sur les macOS récents la dictée bascule d'elle-même entre les deux langues cochées.
+
+CE QUE LE SCRIPT CHANGE (transparence)
+- 2 réglages utilisateur : dictée activée, dictée auto-activée. C'est tout.
+- Aucun logiciel, aucun fichier ajouté, aucun droit admin.
+
+DÉSINSTALLATION
+Clic droit sur UNINSTALL.command > Ouvrir : remet la dictée sur off.
+
+SI ÇA COINCE
+- Le micro ne réagit pas : Réglages > Confidentialité et sécurité > Microphone, autorise l'app où tu dictes.
+- « Dictée » grisée : ton Mac est peut-être géré par une entreprise (profil MDM). Dis-le à Joseph.

@@ -1,6 +1,6 @@
 # Marco Dictation (F9)
 
-Dictée vocale en une touche pour Windows. Aucun compte, aucun droit admin, aucun abonnement.
+Dictée vocale en une touche pour Windows (section Mac plus bas). Aucun compte, aucun droit admin, aucun abonnement.
 
 ## Installation (2 minutes)
 
@@ -25,3 +25,14 @@ Détails complets dans `LISEZ-MOI (Francais).txt` du zip. Désinstallation : `UN
 ---
 
 One-key voice dictation for Windows. F9 = English, Shift+F9 = French, Esc = stop. See `READ-ME (English).txt` in the zip.
+
+## Mac (macOS 13 Ventura ou plus récent)
+
+1. Télécharge **[Marco-Dictation-Mac.zip](https://github.com/Joeladai/marco-dictation/releases/latest/download/Marco-Dictation-Mac.zip)** et double-clique dessus
+2. Clic **droit** sur `INSTALL.command`, **Ouvrir**, puis **Ouvrir** encore (un double-clic simple est bloqué par macOS sur un fichier téléchargé, c'est normal)
+3. Le Terminal ouvre les Réglages sur le panneau Dictée : active **Dictée**, coche **Français + Anglais** dans Langues, choisis **Appuyer deux fois sur Contrôle** comme raccourci
+4. Reviens dans le Terminal, **Entrée** : rapport vert/rouge
+
+Utilisation : curseur dans un champ texte, **2 fois Contrôle**, parle. 2 fois Contrôle ou Échap pour arrêter. Le petit micro à l'écran bascule FR / EN.
+
+Rien n'est installé : c'est la dictée intégrée d'Apple, le script ne fait qu'activer 2 réglages et vérifier. Désinstallation : `UNINSTALL.command`. Détails dans `LISEZ-MOI (Mac).txt`.
